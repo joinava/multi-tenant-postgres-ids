@@ -1,0 +1,54 @@
+{
+  "name": "@zingage/postgres-multi-tenant-ids",
+  "version": "1.0.0",
+  "description": "PostgreSQL IDs for secure multi-tenant applications",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "node --test",
+    "test:watch": "node --test --watch",
+    "test:coverage": "NODE_V8_COVERAGE=.coverage node --test",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write src/**/*.ts",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "postgresql",
+    "typescript",
+    "nodejs",
+    "multi-tenant",
+    "security"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/pg": "^8.11.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "fast-check": "^4.1.1",
+    "prettier": "^3.0.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@types/node": "^22.0.0",
+    "@ethanresnick/type-party": "^0.0.3",
+    "dotenv": "^16.4.0",
+    "pg": "^8.11.0",
+    "type-fest": "^4.41.0",
+    "uuid": "^11.1.0"
+  }
+}
