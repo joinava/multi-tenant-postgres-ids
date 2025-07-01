@@ -34,7 +34,7 @@ export type {
   TenantShortId,
   UnscopedId,
 } from "./helpers/config-agnostic-types.js";
-export type { UUIDV4, UUIDV8 } from "./helpers/utils.js";
+export type { UUID, UUIDV4, UUIDV8 } from "./helpers/utils.js";
 
 export function initialize<
   const TenantScopedEntityTypeConfigs extends NamedEntityTypeConfigs,
