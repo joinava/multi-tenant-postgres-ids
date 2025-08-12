@@ -48,6 +48,7 @@
     // Emit
     "outDir": "./dist",
     "rootDir": "./src",
+    "tsBuildInfoFile": "./dist/.tsbuildinfo",
 
     // Compilation performance
     "incremental": true,
