@@ -18,16 +18,16 @@ export function makeZodSchemas<T extends EntityTypesConfig>(_entityConfigs: T) {
       (val: unknown) => typeof val === "string" && stringIsTenantId(val),
       { message: "Invalid id" }
     ),
-    unscopedIdSchemaOfType<K extends CrossTenantEntityType>() {
-      z.custom<UnscopedId<T["crossTenant"], K>>(
+    unscopedIdSchemaOfType: <K extends CrossTenantEntityType>() => {
+      return z.custom<UnscopedId<T["crossTenant"], K>>(
         (val: unknown) =>
           typeof val === "string" &&
           stringIsUnscopedId<T["crossTenant"], K>(val),
         { message: "Invalid id" }
       );
     },
-    scopedIdSchemaOfType<K extends TenantScopedEntityType>() {
-      z.custom<ScopedId<T["tenantScoped"], K>>(
+    scopedIdSchemaOfType: <K extends TenantScopedEntityType>() => {
+      return z.custom<ScopedId<T["tenantScoped"], K>>(
         (val: unknown) =>
           typeof val === "string" &&
           stringIsScopedId<T["tenantScoped"], K>(val),
