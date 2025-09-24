@@ -1,5 +1,5 @@
-import { instantiateTaggedType } from "@ethanresnick/type-party";
 import fc from "fast-check";
+import { instantiateTaggedType } from "type-party/runtime/tagged-types.js";
 import type { UUIDV4 } from "./helpers/utils.js";
 import { makeUnscopedId } from "./id-kind-implementations/cross-tenant-entity-ids.js";
 import { uuidV4ToTenantId } from "./id-kind-implementations/tenant-ids.js";

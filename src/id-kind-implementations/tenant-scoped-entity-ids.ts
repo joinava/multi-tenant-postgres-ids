@@ -1,6 +1,6 @@
 import { parse as uuidParse, stringify as uuidStringify } from "uuid";
 
-import { instantiateTaggedType } from "@ethanresnick/type-party";
+import { instantiateTaggedType } from "type-party/runtime/tagged-types.js";
 import type {
   ScopedId,
   ShortBinaryString,

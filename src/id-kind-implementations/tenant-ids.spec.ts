@@ -1,7 +1,7 @@
-import { instantiateTaggedType } from "@ethanresnick/type-party";
 import fc from "fast-check";
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
+import { instantiateTaggedType } from "type-party/runtime/tagged-types.js";
 import {
   parse as uuidParse,
   validate as uuidValidate,

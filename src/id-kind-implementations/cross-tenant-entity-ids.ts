@@ -1,7 +1,5 @@
-import {
-  instantiateTaggedType,
-  type Satisfies,
-} from "@ethanresnick/type-party";
+import type { Satisfies } from "type-party";
+import { instantiateTaggedType } from "type-party/runtime/tagged-types.js";
 import { stringify as uuidStringify } from "uuid";
 import type {
   ShortBinaryString,

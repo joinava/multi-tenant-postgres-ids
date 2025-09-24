@@ -1,5 +1,5 @@
-import { instantiateTaggedType } from "@ethanresnick/type-party";
 import type { Tagged } from "type-fest";
+import { instantiateTaggedType } from "type-party/runtime/tagged-types.js";
 import { validate as uuidValidate, version as uuidVersion } from "uuid";
 import type { ShortBinaryString } from "./config-agnostic-types.js";
 
