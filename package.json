@@ -1,6 +1,6 @@
 {
   "name": "@zingage/postgres-multi-tenant-ids",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "PostgreSQL IDs for secure multi-tenant applications",
   "type": "module",
   "engines": {

@@ -1,38 +1,38 @@
 import type {
-    EntityTypeHint,
-    InsertRate,
-    ScopedId,
-    TenantId,
-    TenantShortId,
-    UnscopedId,
+  EntityTypeHint,
+  InsertRate,
+  ScopedId,
+  TenantId,
+  TenantShortId,
+  UnscopedId,
 } from "./helpers/config-agnostic-types.js";
 import type { UUIDV4, UUIDV8 } from "./helpers/utils.js";
 import {
-    isUnscopedId as _isUnscopedId,
-    stringIsUnscopedId as _stringIsUnscopedId,
-    makeMakeUnscopedIdBound,
+  isUnscopedId as _isUnscopedId,
+  stringIsUnscopedId as _stringIsUnscopedId,
+  makeMakeUnscopedIdBound,
 } from "./id-kind-implementations/cross-tenant-entity-ids.js";
 import {
-    getTenantShortIdFromFullId,
-    isTenantId,
-    makeTenantId,
-    stringIsTenantId,
-    uuidV4ToTenantId,
+  getTenantShortIdFromFullId,
+  isTenantId,
+  makeTenantId,
+  stringIsTenantId,
+  uuidV4ToTenantId,
 } from "./id-kind-implementations/tenant-ids.js";
 import {
-    getTenantShortIdFromScopedId as _getTenantShortIdFromScopedId,
-    isScopedId as _isScopedId,
-    scopedIdsBelongToSameTenant as _scopedIdsBelongToSameTenant,
-    stringIsScopedId as _stringIsScopedId,
-    makeMakeScopedIdBound,
+  getTenantShortIdFromScopedId as _getTenantShortIdFromScopedId,
+  isScopedId as _isScopedId,
+  scopedIdsBelongToSameTenant as _scopedIdsBelongToSameTenant,
+  stringIsScopedId as _stringIsScopedId,
+  makeMakeScopedIdBound,
 } from "./id-kind-implementations/tenant-scoped-entity-ids.js";
 
 export type {
-    Id,
-    ScopedId,
-    TenantId,
-    TenantShortId,
-    UnscopedId
+  Id,
+  ScopedId,
+  TenantId,
+  TenantShortId,
+  UnscopedId
 } from "./helpers/config-agnostic-types.js";
 export type { UUID, UUIDV4, UUIDV8 } from "./helpers/utils.js";
 
@@ -129,7 +129,7 @@ type DuplicateTypeHints<T extends NamedEntityTypeConfigs> = {
 }[keyof T];
 
 // Used by callers to apply DuplicateTypeHints as a type-level alarm.
-export { type Satisfies } from "type-party";
+export type { Satisfies } from "type-party";
 
 export type Duplicates<T extends EntityTypesConfig> =
   | (DuplicateTypeHints<T["tenantScoped"]> extends never
